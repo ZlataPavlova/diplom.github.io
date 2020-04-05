@@ -1,0 +1,11 @@
+.search-result__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: calc(1440px-2*104px);
+    max-height: 46px;
+    margin-top: 80px;
+    margin-bottom: 64px;
+    border: 1px solid blue;
+}

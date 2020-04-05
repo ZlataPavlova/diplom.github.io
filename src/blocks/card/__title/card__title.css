@@ -1,0 +1,16 @@
+.card__title {
+    position: relative;
+    width: 352px;
+    height: 60px;
+    margin: auto;
+    margin-top: 12px;
+    font-family: Roboto Slab, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    /* or 115% */
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

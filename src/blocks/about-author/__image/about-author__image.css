@@ -1,0 +1,9 @@
+.about-author__image {
+    position: relative;
+    width: 464px;
+    max-height: 464px;
+    border-radius: 1000px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 104px;
+}

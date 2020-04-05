@@ -1,0 +1,9 @@
+.footer__container-link {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 384px;
+    margin-right: 48px;
+    margin: center;
+    border: 1px solid green;
+}

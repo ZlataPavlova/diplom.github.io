@@ -1,0 +1,9 @@
+@import url('./__way/analytics-information__way.css');
+@import url('./__title/analytics-information__title.css');
+@import url('./__text/analytics-information__text.css');
+.analytics-information {
+    display: block;
+    justify-content: space-around;
+    max-width: 1440px;
+    min-height: 426px;
+}

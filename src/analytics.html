@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Analytics">
+    <title>Analytics</title>
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
+</head>
+
+<body>
+    <div class="page">
+        <header class="page__header header header_dark">
+            <h2 class="header__title-dark">NewsAnalyzer</h2>
+            <div class="header__link">
+                <a class="header__link_style-dark link " href="index.html" target="_blank">Главная</a>
+                <a class="header__link_style-dark link link_active-dark" href="about.html" target="_blank">О проекте</a>
+            </div>
+        </header>
+        <section class="page__analytics-information analytics-information">
+            <p class="analytics-information__way">Главная<span class="colortext">/Аналитика</span></p>
+            <h1 class="analytics-information__title">Вы спросили: «Путешествия»</h1>
+            <p class="analytics-information__text">Новостей за неделю: <strong>34 324</strong></p>
+            <p class="analytics-information__text">Упоминаний в заголовках:<strong>235</strong></p>
+        </section>
+        <section class="page__analytics-diagram analytics-diagram">
+            <h3 class="analytics-diagram__title">Аналитика по дням</h3>
+            <p class="analytics-diagram__date">Дата (август)</p>
+            <p class="analytics-diagram__name-axis">Кол-во упоминаний</p>
+            <img class="analytics-diagram__vector" src="<%=require('./image/Vector.svg').default%>" alt="ось диаграммы">
+            <img class="analytics-diagram__axis" src="<%=require('./image/ось диаграммы.svg').default%>" alt="ось диаграммы">
+
+            <div class="analytics-diagram__columns">
+                <div class="analytics-diagram__column">
+                    <p class="column__date">19,пн</p>
+                    <img class="column__image" src="<%=require('./image/понедельник.svg').default%>" alt="число запросов в понедельник">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">20,вт</p>
+                    <img class="column__image" src="<%=require('./image/вторник.svg').default%>" alt="число запросов в вторник">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">21,ср</p>
+                    <img class="column__image" src="<%=require('./image/среда.svg').default%>" alt="число запросов в среду">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">22,чт</p>
+                    <img class="column__image" src="<%=require('./image/четверг.svg').default%>" alt="число запросов в четверг">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">23,пт</p>
+                    <img class="column__image" src="<%=require('./image/пятница.svg').default%>" alt="число запросов в пятницу">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">24,сб</p>
+                    <img class="column__image" src="<%=require('./image/суббота.svg').default%>" alt="число запросов в субботу">
+                </div>
+                <div class="analytics-diagram__column">
+                    <p class="column__date">25,вс</p>
+                    <img class="column__image" src="<%=require('./image/воскресенье.svg').default%>" alt="число запросов в воскресенье">
+                </div>
+            </div>
+            <img class="analytics-diagram__axis" src="<%=require('./image/ось диаграммы.svg').default%>" alt="ось диаграммы">
+            <div class="">
+                <p class=""></p>
+                <p class=""></p>
+            </div>
+        </section>
+        <section class="page__footer footer">
+            <a class="footer__copyright link" href="" target="_blank">&copy; 2020. Supersite</a>
+            <div class="footer__container-link">
+                <a class="footer__link link" href="index.html" target="_blank">Главная</a>
+                <a class="footer__link link" href="about.html" target="_blank">О проекте</a>
+                <a class="footer__link link" href="https://praktikum.yandex.ru" target="_blank">ЯндексПрактикум</a>
+            </div>
+            <div class="footer__container-image">
+                <a class="link" href="https://github.com/ZlataPavlova" target="_blank">
+                <img class="footer__image" src="<%=require('./image/git.svg').default%>" alt="иконка Github">
+            </a>
+                <a class="link" href="" target="_blank">
+                <img class="footer__image" src="<%=require('./image/vk.svg').default%>" alt="иконка vk">
+            </a>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="<%= htmlWebpackPlugin.files.chunks.analytics.entry %>"></script>
+</body>
+
+</html>

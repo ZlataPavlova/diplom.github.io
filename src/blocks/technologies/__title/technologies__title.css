@@ -1,0 +1,16 @@
+.technologies__title {
+    position: relative;
+    max-width: 344px;
+    min-height: 92px;
+    margin-left: 104px;
+    margin-top: 80px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    /* or 115% */
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

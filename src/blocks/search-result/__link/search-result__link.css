@@ -1,0 +1,11 @@
+.search-result__link {
+    position: relative;
+    height: 24px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+    align-items: center;
+    text-align: center;
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

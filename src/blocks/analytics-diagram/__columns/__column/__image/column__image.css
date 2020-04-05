@@ -1,0 +1,8 @@
+.column__image {
+    position: relative;
+    /* or 133% */
+    /* main/white */
+    color: #FFFFFF;
+    background-color: royalblue;
+    border: 1px solid red;
+}

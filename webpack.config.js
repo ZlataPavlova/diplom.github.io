@@ -7,15 +7,18 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
-    entry: { main: './src/index.js' },
+    entry: {
+        main: './src/index.js',
+        about: './src/about.js',
+        analytics: './src/analytics.js'
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
     // указали путь к файлу, в квадратных скобках куда вставлять сгенерированный хеш
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
@@ -27,7 +30,8 @@ module.exports = {
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader',
-                    'postcss-loader']
+                    'postcss-loader'
+                ]
             },
 
             {
@@ -54,14 +58,24 @@ module.exports = {
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
             cssProcessorPluginOptions: {
-                    preset: ['default'],
+                preset: ['default'],
             },
             canPrint: true
-    }),
+        }),
         new HtmlWebpackPlugin({
             inject: false,
             template: './src/index.html',
             filename: 'index.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/about.html',
+            filename: 'about.html'
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            template: './src/analytics.html',
+            filename: 'analytics.html'
         }),
         new webpack.DefinePlugin({
             'NODE_ENV': JSON.stringify(process.env.NODE_ENV)

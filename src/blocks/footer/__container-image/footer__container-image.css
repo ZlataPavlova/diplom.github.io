@@ -1,0 +1,9 @@
+.footer__container-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 88px;
+    margin-right: 104px;
+    border: 1px solid green;
+}

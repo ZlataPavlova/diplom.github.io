@@ -1,0 +1,13 @@
+.column__date {
+    position: relative;
+    width: 104px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    /* or 444% */
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

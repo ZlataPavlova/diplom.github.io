@@ -1,0 +1,15 @@
+.search-result__button {
+    position: relative;
+    width: 288px;
+    height: 64px;
+    margin-top: 64px;
+    margin-bottom: 80px;
+    background: #FFFFFF;
+    border-radius: 80px;
+    border: 1px solid red;
+}
+
+.search-result__button:hover {
+    background: #C0C0C0;
+    cursor: pointer;
+}

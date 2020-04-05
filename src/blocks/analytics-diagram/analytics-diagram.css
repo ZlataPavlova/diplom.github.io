@@ -1,0 +1,13 @@
+@import url('./__axis/analytics-diagram__axis.css');
+@import url('./__date/analytics-diagram__date.css');
+@import url('./__name-axis/analytics-diagram__name-axis.css');
+@import url('./__title/analytics-diagram__title.css');
+@import url('./__vector/analytics-diagram__vector.css');
+@import url('./__columns/analytics-diagram__columns.css');
+.analytics-diagram {
+    display: block;
+    max-width: 1440px;
+    background: #F5F6F7;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}

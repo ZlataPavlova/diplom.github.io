@@ -1,0 +1,10 @@
+.swiper-button-next {
+    position: absolute;
+    background-size: contain;
+    min-width: 50px;
+    min-height: 50px;
+    right: 24px;
+    top: 126px;
+    border: 1px solid red;
+    background-image: url('/src/image/slider_next.png');
+}

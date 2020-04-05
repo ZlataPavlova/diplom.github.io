@@ -1,0 +1,14 @@
+.search__text {
+    position: relative;
+    width: 545px;
+    height: 48px;
+    margin: auto;
+    margin-top: 32px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    border: 1px solid green;
+}

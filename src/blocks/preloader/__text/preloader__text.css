@@ -1,0 +1,15 @@
+.preloader__text {
+    position: relative;
+    width: 280px;
+    height: 24px;
+    margin-top: 74px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    text-align: center;
+    /* simulator/gray/text */
+    color: #B6BCBF;
+}

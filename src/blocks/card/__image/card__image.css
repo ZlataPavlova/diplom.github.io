@@ -1,0 +1,7 @@
+.card__image {
+    position: relative;
+    max-width: 400px;
+    max-height: 272px;
+    border-radius: 20px;
+    border: 1px solid red;
+}

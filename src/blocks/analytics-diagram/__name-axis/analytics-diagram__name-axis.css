@@ -1,0 +1,16 @@
+.analytics-diagram__name-axis {
+    position: absolute;
+    left: 208px;
+    top: 158px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    /* or 133% */
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    /* simulator/gray/text */
+    color: #B6BCBF;
+    border: 1px solid black;
+}

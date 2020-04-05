@@ -1,0 +1,14 @@
+.about-author__text {
+    position: relative;
+    margin-top: 24px;
+    font-family: Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    white-space: pre-wrap;
+    /* or 133% */
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

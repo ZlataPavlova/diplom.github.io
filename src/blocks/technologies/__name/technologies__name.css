@@ -1,0 +1,15 @@
+.technologies__name {
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    margin: center;
+    /* identical to box height, or 133% */
+    text-align: center;
+    letter-spacing: 0.2px;
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

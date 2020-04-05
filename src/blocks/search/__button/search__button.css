@@ -1,0 +1,21 @@
+.search__button {
+    position: relative;
+    width: 168px;
+    height: 64px;
+    margin-top: 0px;
+    margin-right: 0px;
+    bottom: 0%;
+    background: #2F71E5;
+    box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+    border-radius: 100px;
+}
+
+.search__button:hover {
+    background: #347EFF;
+    cursor: pointer
+}
+
+.search__button:active {
+    background: #2A65CC;
+    cursor: pointer;
+}

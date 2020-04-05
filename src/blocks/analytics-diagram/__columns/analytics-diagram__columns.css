@@ -1,0 +1,11 @@
+@import url('./__column/analytics-diagram__column.css');
+.analytics-diagram__columns {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 1440px;
+    height: 538px;
+    border: 1px solid rebeccapurple;
+}

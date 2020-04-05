@@ -1,0 +1,15 @@
+.search__title {
+    position: relative;
+    max-width: 608px;
+    min-height: 128px;
+    margin: auto;
+    margin-top: 80px;
+    text-align: left;
+    font-family: 'robotoslab-regular', Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    color: #FFFFFF;
+    border: 1px solid blueviolet;
+}

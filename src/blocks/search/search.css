@@ -1,0 +1,15 @@
+@import url('./__title/search__title.css');
+@import url('./__text/search__text.css');
+@import url('./__header/search__header.css');
+@import url('./__form/search__form.css');
+@import url('./__field/search__field.css');
+@import url('./__input/search__input.css');
+@import url('./__button/search__button.css');
+.search {
+    display: block;
+    position: relative;
+    justify-content: flex-start;
+    max-width: 1440px;
+    min-height: 578px;
+    background-image: url('/src/image/header.png');
+}

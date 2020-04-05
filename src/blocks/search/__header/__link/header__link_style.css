@@ -1,0 +1,19 @@
+.header__link_style {
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    /* main/white */
+    color: #FFFFFF;
+}
+
+.header__link_style:active {
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.header__link_style:hover {
+    border-bottom: 3px solid #FFFFFF;
+}
+
+.link_active {
+    border-bottom: 3px solid #FFFFFF;
+}

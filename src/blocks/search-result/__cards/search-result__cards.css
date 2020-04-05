@@ -1,0 +1,14 @@
+.search-result__cards {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1440px;
+    min-height: 1566px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    padding-left: 104px;
+    padding-right: 104px;
+    border: 1px solid red;
+    /* display: none; */
+}

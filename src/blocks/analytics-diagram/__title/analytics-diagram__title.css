@@ -1,0 +1,15 @@
+.analytics-diagram__title {
+    position: relative;
+    width: 1232px;
+    margin-left: 104px;
+    margin-bottom: 0px;
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    /* identical to box height, or 115% */
+    /* main/black */
+    color: #1A1B22;
+    border: 1px solid red;
+}

@@ -1,0 +1,11 @@
+@import url('./__image/about-author__image.css');
+@import url('./__info/about-author__info.css');
+@import url('./__title/about-author__title.css');
+@import url('./__text/about-author__text.css');
+.about-author {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    max-width: 1440px;
+    min-height: 624px;
+}

@@ -1,0 +1,13 @@
+@import url('./__date/column__date.css');
+@import URL('./__image/column__image.css');
+.analytics-diagram__column {
+    display: flex;
+    position: relative;
+    max-width: 1440px;
+    height: 24px;
+    border: 1px solid blue;
+    margin-left: 104px;
+    margin-right: 104px;
+    justify-content: baseline;
+    align-items: center;
+}

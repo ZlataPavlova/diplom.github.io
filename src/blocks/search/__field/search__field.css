@@ -1,0 +1,9 @@
+.search__field {
+    position: relative;
+    display: block;
+    width: 608px;
+    height: 64px;
+    margin: auto;
+    margin-top: 64px;
+    border: 1px solid red;
+}

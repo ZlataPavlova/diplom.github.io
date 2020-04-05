@@ -1,0 +1,8 @@
+.about-author__info {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 56px;
+    margin-top: 131px;
+    border: 1px solid black;
+}
