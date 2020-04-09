@@ -1,5 +1,6 @@
 @import url('./__date/column__date.css');
 @import URL('./__image/column__image.css');
+@import url('./__value/column__value.css');
 .analytics-diagram__column {
     display: flex;
     position: relative;
@@ -10,4 +11,20 @@
     margin-right: 104px;
     justify-content: baseline;
     align-items: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .analytics-diagram__column {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .analytics-diagram__column {
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 100%;
+    }
 }

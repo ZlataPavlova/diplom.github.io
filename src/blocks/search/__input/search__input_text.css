@@ -3,7 +3,7 @@
     height: 22px;
     margin-left: 24px;
     margin-top: 21px;
-    font-family: 'robotoslab-regular', Arial, sans-serif;
+    font-family: robotoslab-regular, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -12,4 +12,11 @@
     /* main/black */
     color: #1A1B22;
     border: 1px solid blue;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .search__input_text {
+        width: 256px;
+        flex-wrap: wrap;
+    }
 }

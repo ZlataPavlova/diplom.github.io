@@ -3,13 +3,24 @@
     width: 288px;
     height: 64px;
     margin-top: 64px;
-    margin-bottom: 80px;
     background: #FFFFFF;
     border-radius: 80px;
     border: 1px solid red;
 }
 
 .search-result__button:hover {
+    cursor: pointer;
     background: #C0C0C0;
     cursor: pointer;
+    box-shadow: 0 0 12px #C0C0C0;
+    -moz-box-shadow: 0 0 12px #C0C0C0;
+    -o-box-shadow: 0 0 12px #C0C0C0;
+    -ms-box-shadow: 0 0 12px #C0C0C0;
+    -webkit-box-shadow: 0 0 12px #C0C0C0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .search-result__button {
+        margin-top: 12px;
+    }
 }

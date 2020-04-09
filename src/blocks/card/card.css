@@ -4,10 +4,28 @@
 @import url('./__text/card__text.css');
 @import url('./__link/card__link.css');
 .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
     position: relative;
     max-width: 400px;
     height: 576px;
     margin-top: 0px;
     border: 1px solid blue;
+    align-items: baseline;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .card {
+        margin-top: 32px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .card {
+        width: 224px;
+        height: 425px;
+        margin-top: 32px;
+    }
 }

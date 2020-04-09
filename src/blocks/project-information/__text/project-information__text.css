@@ -1,9 +1,9 @@
 .project-information__text {
     position: relative;
     max-width: 816px;
-    left: 104px;
+    margin-left: 104px;
     margin-top: 24px;
-    font-family: Roboto;
+    font-family: roboto-medium, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -12,4 +12,20 @@
     /* main/black */
     color: #1A1B22;
     border: 1px solid red;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .project-information__text {
+        margin-top: 16px;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .project-information__text {
+        margin-left: 40px;
+        margin-top: 16px;
+        margin-right: 40px;
+    }
 }

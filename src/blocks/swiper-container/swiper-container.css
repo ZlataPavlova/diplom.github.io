@@ -1,11 +1,12 @@
 @import url('./swiper-button-prev.css');
 @import url('./__swiper-slide/swiper-slide.css');
 @import url('./swiper-button-next.css');
+@import url('./swiper-pagination.css');
 .swiper-container {
-    display: flex;
+    display: block;
     position: relative;
     width: 1440px;
-    height: 280px;
+    min-height: 280px;
     margin-top: 0px;
     border: 1px solid olive;
     overflow: hidden;
@@ -15,6 +16,7 @@
 .swiper-wrapper {
     position: relative;
     display: flex;
+    ;
     width: 1440px;
     height: 280px;
     margin-top: 0px;

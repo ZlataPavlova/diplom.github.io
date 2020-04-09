@@ -1,7 +1,7 @@
 .column__date {
     position: relative;
     width: 104px;
-    font-family: Roboto;
+    font-family: roboto-medium, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -10,4 +10,11 @@
     /* main/black */
     color: #1A1B22;
     border: 1px solid red;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .column__date {
+        margin-left: 0px;
+        width: 80px;
+    }
 }

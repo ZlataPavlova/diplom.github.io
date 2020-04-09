@@ -1,10 +1,8 @@
 .card__link {
-    position: relative;
-    width: 352px;
-    min-height: 20px;
-    margin-left: 24px;
-    margin-top: 18px;
-    font-family: Roboto Slab, Arial, sans-serif;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    font-family: robotoslab-regular, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 16px;
@@ -15,4 +13,19 @@
     /* simulator/gray/text */
     color: #B6BCBF;
     border: 1px solid red;
+}
+
+@media screen and (min-width: 320px) and (max-width:586px) {
+    .card__link {
+        left: 16px;
+        bottom: 16px;
+    }
+}
+
+@media screen and (min-width: 587px) and (max-width: 768px) {
+    .card__link {
+        margin-top: 16px;
+        margin-left: 0px;
+        position: relative;
+    }
 }

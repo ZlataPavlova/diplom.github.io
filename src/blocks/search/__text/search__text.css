@@ -1,14 +1,24 @@
 .search__text {
     position: relative;
-    width: 545px;
+    max-width: 545px;
     height: 48px;
     margin: auto;
     margin-top: 32px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: roboto-medium, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 24px;
     color: #FFFFFF;
     border: 1px solid green;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .search__text {
+        width: 90%;
+        margin-right: 14px;
+        height: 130px;
+        font-size: 20px;
+        line-height: 26px;
+    }
 }

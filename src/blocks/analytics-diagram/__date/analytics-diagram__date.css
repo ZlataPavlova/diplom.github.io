@@ -2,7 +2,7 @@
     position: absolute;
     left: 104px;
     top: 158px;
-    font-family: Roboto;
+    font-family: roboto-medium, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -13,4 +13,20 @@
     /* simulator/gray/text */
     color: #B6BCBF;
     border-bottom: 1px solid black;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .analytics-diagram__date {
+        left: 16px;
+        top: 70px;
+        width: 24px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .analytics-diagram__date {
+        left: 40px;
+        top: 119px;
+        width: 39px;
+    }
 }

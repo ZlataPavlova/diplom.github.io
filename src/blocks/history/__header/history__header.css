@@ -1,0 +1,25 @@
+.history__header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 1232px;
+    min-height: 46px;
+    margin-top: 80px;
+    border: 1px solid blue;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .history__header {
+        margin-top: 32px;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .history__header {
+        margin-left: 40px;
+        margin-top: 72px;
+        height: 34px;
+    }
+}

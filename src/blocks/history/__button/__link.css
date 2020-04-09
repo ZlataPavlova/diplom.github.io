@@ -1,0 +1,16 @@
+.button__link {
+    position: relative;
+    margin: auto;
+    /* button */
+    font-family: roboto-regular, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height, or 133% */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* main/black */
+    color: #1A1B22;
+}

@@ -4,7 +4,8 @@
     min-height: 46px;
     margin-top: 80px;
     margin-left: 104px;
-    font-family: Roboto Slab;
+    font-family: robotoslab-regular, Arial, sans-serif;
+    ;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -13,4 +14,11 @@
     /* main/black */
     color: #1A1B22;
     border: 1px solid blue;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .analytics-information__title {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
 }

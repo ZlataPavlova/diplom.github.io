@@ -4,9 +4,23 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    min-width: 189px;
     /* max-height: 24px; */
-    margin-left: 846px;
+    width: 189px;
+    margin-right: 42px;
     margin-top: 30px;
     border: 1px solid blue;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .header__link {
+        width: 47%;
+        margin-right: 14px;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .header__link {
+        width: 25%;
+    }
 }
