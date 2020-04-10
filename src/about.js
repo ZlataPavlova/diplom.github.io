@@ -7,4 +7,4 @@ import "./about.css";
 // import './image/slider-back.png';
 // import './image/slider-next.png';
 
-// import { preloader } from "./blocks/preloader/preloader"
+import { swiper } from "./blocks/swiper-container/swiper"
