@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Main">
+    <meta name="description" content="Главная страница сервиса для анализа происходящих в мире событий">
+    <meta name="author" content="Pavlova Zlata">
     <title>Main</title>
-    <link rel="icon" href='src\image\главная.svg' type="image/svg">
+    <link rel="icon" href='/src/image/главная.svg' type="image/svg">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
 
@@ -33,17 +34,24 @@
             </div>
         </section>
         <section class="page__search-result search-result">
+            <!-- блок preloader будет использоваться во время загрузки карточек с сервиса, сейчас он отключен
+            и не отображается,чтобы посмотреть как он выглядет необходимо зайти в класс preloader и снять display:none -->
             <div class="preloader">
                 <i class="preloader__circle-preloader"></i>
                 <p class="preloader__text">Идет поиск новостей...</p>
             </div>
+            <!-- блок будет использоваться если при загрузке карточек с сервера будет выдана ошибка 404,чтобы посмотреть как он выглядет необходимо зайти в класс search-result__not-found и снять display:none -->
+            <div class="search-result__not-found">
+                <img class="search-result__not-found__image" src="<%=require('./image/not-found_v1.svg').default%>" alt="Ничего не найдено">
+                <h3 class="search-result__not-found__title">Ничего не найдено</h3>
+                <p class="search-result__not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
+            </div>
+            <!-- контейнер с подгружаемыми карточками в будущем будут загружаться с сервера сейчас отрисованы статично -->
             <div class="search-result__cards">
                 <div class="search-result__header">
                     <h3 class="search-result__title">Результаты поиска</h3>
                     <a class="search-result__link link" href="analytics.html" target="_blank">Посмотреть аналитику &rsaquo;</a>
                 </div>
-
-
                 <div class="card">
                     <img class="card__image" src="<%=require('./image/card_1.png').default%>" alt="Национальное достояние – парки">
                     <p class="card__date">2 августа, 2019</p>
@@ -100,7 +108,7 @@
             </div>
         </section>
         <section class="page__footer footer">
-            <p class="footer__copyright link">&copy; 2020. Pavlova Zlata</p>
+            <p class="footer__copyright link colortext">&copy; 2020. Pavlova Zlata</p>
             <div class="footer__container-link">
                 <a class="footer__link link" href="index.html" target="_blank">Главная</a>
                 <a class="footer__link link" href="about.html" target="_blank">О проекте</a>
@@ -110,7 +118,7 @@
                 <a class="link" href="https://github.com/ZlataPavlova" target="_blank">
                 <img class="footer__image" src="<%=require('./image/git.svg').default%>" alt="иконка Github">
             </a>
-                <a class="link" href="" target="_blank">
+                <a class="link" href="https://vk.com/id29548218" target="_blank">
                 <img class="footer__image" src="<%=require('./image/vk.svg').default%>" alt="иконка vk">
             </a>
             </div>

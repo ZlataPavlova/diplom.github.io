@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Main">
+    <meta name="description" content="Страница с информацией об авторе сайта">
+    <meta name="author" content="Pavlova Zlata">
     <title>About</title>
-    <link rel="icon" href='src\image\о_проекте.svg' type="image/svg">
+    <link rel="icon" href='/src/image/о_проекте.svg' type="image/svg">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 
@@ -101,22 +102,22 @@
                         <p class="swiper__info">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
                     </div>
                 </div>
-                <!-- If we need pagination -->
+
                 <div class="swiper-pagination">
 
                 </div>
-                <!-- If we need navigation buttons -->
+
                 <button class="swiper-button-next"></button>
                 <button class="swiper-button-prev"></button>
-                <!-- If we need scrollbar -->
-                <div class="swiper-scrollbar"></div>
+
             </div>
-            <button class="history__button">
-                <a class="button__link link" href="https://github.com/ZlataPavlova" target="_blank">Открыть в Github</a>
-            </button>
+            <form class="history__form" style="display: inline" action="https://github.com/ZlataPavlova" method="get">
+                <button class="history__button  link"> Открыть в Github</button>
+            </form>
+
         </section>
         <section class="page__footer footer">
-            <p class="footer__copyright link">&copy; 2020. Pavlova Zlata</p>
+            <p class="footer__copyright link colortext">&copy; 2020. Pavlova Zlata</p>
             <div class="footer__container-link">
                 <a class="footer__link link" href="index.html" target="_blank">Главная</a>
                 <a class="footer__link link" href="about.html" target="_blank">О проекте</a>

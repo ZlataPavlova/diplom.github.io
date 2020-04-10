@@ -1,12 +1,17 @@
-@import url('./__date/column__date.css');
-@import URL('./__image/column__image.css');
-@import url('./__value/column__value.css');
+@import url('./__date/analytics-diagram__column__date.css');
+@import url('./__value/analytics-diagram__column__value.css');
+@import url('./__image/analytics-diagram__column__image-monday.css');
+@import url('./__image/analytics-diagram__column__image-tuesday.css');
+@import url('./__image/analytics-diagram__column__image-wednesday.css');
+@import url('./__image/analytics-diagram__column__image-thursday.css');
+@import url('./__image/analytics-diagram__column__image-friday.css');
+@import url('./__image/analytics-diagram__column__image-saturday.css');
+@import url('./__image/analytics-diagram__column__image-sunday.css');
 .analytics-diagram__column {
     display: flex;
     position: relative;
     max-width: 1440px;
     height: 24px;
-    border: 1px solid blue;
     margin-left: 104px;
     margin-right: 104px;
     justify-content: baseline;

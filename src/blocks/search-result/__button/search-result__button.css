@@ -5,7 +5,7 @@
     margin-top: 64px;
     background: #FFFFFF;
     border-radius: 80px;
-    border: 1px solid red;
+    border: #FFFFFF;
 }
 
 .search-result__button:hover {

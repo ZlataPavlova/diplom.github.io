@@ -10,7 +10,6 @@
     align-items: center;
     max-width: 1440px;
     min-height: 80px;
-    border: 1px solid green;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

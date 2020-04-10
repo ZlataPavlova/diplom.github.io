@@ -8,10 +8,8 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 22px;
-    /* identical to box height, or 137% */
-    /* main/black */
     color: #1A1B22;
-    border: 1px solid blue;
+    border: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

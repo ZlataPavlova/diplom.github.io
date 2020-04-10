@@ -1,18 +1,13 @@
-@import url('./__link.css');
 .history__button {
     display: none;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {
     .history__button {
+        position: relative;
+        display: block;
         width: 288px;
         height: 56px;
-        display: flex;
-        position: relative;
-        margin: auto;
-        margin-top: 24px;
-        margin-bottom: 32px;
-        border: 1px solid #1A1B22;
         box-sizing: border-box;
         border-radius: 80px;
         background: #F5F6F7;

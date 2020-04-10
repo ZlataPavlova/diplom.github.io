@@ -6,7 +6,6 @@
     width: 1232px;
     min-height: 46px;
     margin-top: 80px;
-    border: 1px solid blue;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {
@@ -16,7 +15,7 @@
     }
 }
 
-@media screen and (min-width: 537px) and (max-width: 768px) {
+@media screen and (min-width: 537px) and (max-width: 1366px) {
     .history__header {
         margin-left: 40px;
         margin-top: 72px;

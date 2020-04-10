@@ -4,6 +4,7 @@
 @import url('./__cards/search-result__cards.css');
 @import url('./__button/search-result__button.css');
 @import url('./__text/search-result__text.css');
+@import url('./__not-found/search-result__not-found.css');
 .search-result {
     display: flex;
     flex-direction: column;
@@ -12,5 +13,4 @@
     min-height: 282px;
     background-color: #F5F6F7;
     justify-content: center;
-    border: 1px solid green;
 }

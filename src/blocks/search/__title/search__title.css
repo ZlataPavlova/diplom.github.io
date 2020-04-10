@@ -9,7 +9,6 @@
     font-size: 60px;
     line-height: 64px;
     color: #FFFFFF;
-    border: 1px solid blueviolet;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

@@ -14,7 +14,6 @@
     /* identical to box height, or 115% */
     /* main/black */
     color: #1A1B22;
-    border: 1px solid palevioletred;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

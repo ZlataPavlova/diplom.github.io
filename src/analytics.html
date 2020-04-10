@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Analytics">
+    <meta name="description" content="Страница с аналитикой по запрошенной в поисковике информации">
+    <meta name="author" content="Pavlova Zlata">
     <title>Analytics</title>
-    <link rel="icon" href='src\image\аналитика.svg' type="image/svg">
+    <link rel="icon" href='/src/image/аналитика.svg' type="image/svg">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.analytics.css %>">
 </head>
 
@@ -34,46 +35,46 @@
 
             <div class="analytics-diagram__columns">
                 <div class="analytics-diagram__column">
-                    <p class="column__date">19,пн</p>
-                    <p class="column__value">15</p>
-                    <img class="column__image column__image_monday" src="<%=require('./image/понедельник.svg').default%>" alt="число запросов в понедельник">
+                    <p class="analytics-diagram__column__date">19,пн</p>
+                    <p class="analytics-diagram__column__value">15</p>
+                    <img class="analytics-diagram__column__image-monday" src="<%=require('./image/понедельник.svg').default%>" alt="число запросов в понедельник">
                 </div>
                 <div class="analytics-diagram__column">
-                    <p class="column__date">20,вт</p>
-                    <p class="column__value">18</p>
-                    <img class="column__image column__image_tuesday" src="<%=require('./image/вторник.svg').default%>" alt="число запросов в вторник">
+                    <p class="analytics-diagram__column__date">20,вт</p>
+                    <p class="analytics-diagram__column__value">18</p>
+                    <img class="analytics-diagram__column__image-tuesday" src="<%=require('./image/вторник.svg').default%>" alt="число запросов в вторник">
                 </div>
                 <div class="analytics-diagram__column ">
-                    <p class="column__date">21,ср</p>
-                    <p class="column__value">11</p>
-                    <img class="column__image column__image_wednesday" src="<%=require('./image/среда.svg').default%>" alt="число запросов в среду">
+                    <p class="analytics-diagram__column__date">21,ср</p>
+                    <p class="analytics-diagram__column__value">11</p>
+                    <img class="analytics-diagram__column__image-wednesday" src="<%=require('./image/среда.svg').default%>" alt="число запросов в среду">
                 </div>
                 <div class="analytics-diagram__column">
-                    <p class="column__date">22,чт</p>
-                    <p class="column__value">39</p>
-                    <img class="column__image column__image_thursday" src="<%=require('./image/четверг.svg').default%>" alt="число запросов в четверг">
+                    <p class="analytics-diagram__column__date">22,чт</p>
+                    <p class="analytics-diagram__column__value">39</p>
+                    <img class="analytics-diagram__column__image-thursday" src="<%=require('./image/четверг.svg').default%>" alt="число запросов в четверг">
                 </div>
                 <div class="analytics-diagram__column">
-                    <p class="column__date">23,пт</p>
-                    <p class="column__value">45</p>
-                    <img class="column__image column__image_friday" src="<%=require('./image/пятница.svg').default%>" alt="число запросов в пятницу">
+                    <p class="analytics-diagram__column__date">23,пт</p>
+                    <p class="analytics-diagram__column__value">45</p>
+                    <img class="analytics-diagram__column__image-friday" src="<%=require('./image/пятница.svg').default%>" alt="число запросов в пятницу">
                 </div>
                 <div class="analytics-diagram__column">
-                    <p class="column__date">24,сб</p>
-                    <p class="column__value">73</p>
-                    <img class="column__image column__image_saturday" src="<%=require('./image/суббота.svg').default%>" alt="число запросов в субботу">
+                    <p class="analytics-diagram__column__date">24,сб</p>
+                    <p class="analytics-diagram__column__value">73</p>
+                    <img class="analytics-diagram__column__image-saturday" src="<%=require('./image/суббота.svg').default%>" alt="число запросов в субботу">
                 </div>
                 <div class="analytics-diagram__column">
-                    <p class="column__date">25,вс</p>
-                    <p class="column__value">34</p>
-                    <img class="column__image column__image_sunday" src="<%=require('./image/воскресенье.svg').default%>" alt="число запросов в воскресенье">
+                    <p class="analytics-diagram__column__date">25,вс</p>
+                    <p class="analytics-diagram__column__value">34</p>
+                    <img class="analytics-diagram__column__image-sunday" src="<%=require('./image/воскресенье.svg').default%>" alt="число запросов в воскресенье">
                 </div>
             </div>
             <img class="analytics-diagram__axis" src="<%=require('./image/ось диаграммы.svg').default%>" alt="ось диаграммы">
         </section>
 
         <section class="page__footer footer">
-            <p class="footer__copyright link">&copy; 2020. Pavlova Zlata</p>
+            <p class="footer__copyright link colortext">&copy; 2020. Pavlova Zlata</p>
             <div class="footer__container-link">
                 <a class="footer__link link" href="index.html" target="_blank">Главная</a>
                 <a class="footer__link link" href="about.html" target="_blank">О проекте</a>

@@ -1,0 +1,13 @@
+.history__form {
+    display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .history__form {
+        display: flex;
+        position: relative;
+        margin: auto;
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+}

@@ -1,6 +1,7 @@
 @media screen and (min-width: 320px) and (max-width: 536px) {
-    .column__image_wednesday {
+    .analytics-diagram__column__image-wednesday {
         margin-left: 0px;
+        position: relative;
         width: 30px;
         height: 24px;
     }

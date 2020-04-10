@@ -1,6 +1,5 @@
 @import url('./swiper-pagination-bullet.css');
 .swiper-pagination {
-    border: 1px solid red;
     width: 72px;
     justify-content: space-between;
     position: relative;
