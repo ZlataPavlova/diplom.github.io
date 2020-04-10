@@ -7,7 +7,7 @@
     top: 126px;
     border-radius: 50%;
     border: black;
-    background-image: url('./image/slider-next.png');
+    background-image: url('/src/image/slider-next.png');
 }
 
 .swiper-button-next:hover {

@@ -1,7 +1,7 @@
 import "./style.css";
 
 
-// import './image/главная.svg';
+import './image/главная.svg';
 
 
 // import './image/avatar.jpg';
@@ -13,7 +13,7 @@ import "./style.css";
 // import './image/card_6.png';
 
 // import './image/git.svg';
-// import './image/header.png';
+import './image/header.png';
 
 // import './image/not-found_v1.svg';
 
