@@ -1,6 +1,6 @@
 import "./about.css";
 import './image/о_проекте.svg';
-import './image/avatar.jpg';
+import './images/avatar.jpg';
 import './image/css.svg';
 import './image/html.svg';
 import './image/js2.png';
