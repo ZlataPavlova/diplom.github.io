@@ -6,7 +6,7 @@
         left: 24px;
         top: 126px;
         border-radius: 100%;
-        background-image: url"<%=require('/src/image/slider-back.png').default%>";
+        background-image: url"<%=require('./image/slider-back.png').default%>";
         border: black;
     }
     
