@@ -7,7 +7,7 @@
     <meta name="description" content="Страница с информацией об авторе сайта">
     <meta name="author" content="Pavlova Zlata">
     <title>About</title>
-    <link rel="icon" href='/src/image/о_проекте.svg' type="image/svg">
+    <link rel="icon" href="<%=require('./image/о_проекте.svg').default%>" type="image/svg">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.about.css %>">
 </head>
 
@@ -38,14 +38,14 @@
             </div>
             <div class="technologies__container">
                 <h4 class="technologies__name">CSS</h4>
-                <img class="technologies__image" src="<%=require('./image/css.svg').default%>" alt="значок html"></div>
+                <img class="technologies__image" src="<%=require('./image/css.svg').default%>" alt="значок css"></div>
             <div class="technologies__container">
                 <h4 class="technologies__name">Java Script</h4>
-                <img class="technologies__image" src="<%=require('./image/js2.png').default%>" alt="значок html">
+                <img class="technologies__image" src="<%=require('./image/js2.png').default%>" alt="значок js">
             </div>
             <div class="technologies__container">
                 <h4 class="technologies__name">Webpack</h4>
-                <img class="technologies__image" src="<%=require('./image/webpack.svg').default%>" alt="значок html">
+                <img class="technologies__image" src="<%=require('./image/webpack.svg').default%>" alt="значок webpack">
             </div>
         </section>
 
@@ -89,7 +89,7 @@
                     </div>
                     <div class="swiper-slide">
                         <p class="swiper__date">14 августа, 2019</p>
-                        <img class="swiper__image" src='./image/avatar.jpg' alt="Аватар автора">
+                        <img class="swiper__image" src="<%=require('./image/avatar.jpg').default%>" alt="Аватар автора">
                         <h3 class="swiper__title">Антон Долинин</h3>
                         <p class="swiper__email">anton@yandex.ru</p>
                         <p class="swiper__info">Emmet (formerly Zen Coding) is a web- developer’s toolkit that can greatly improve your HTML & CSS workflow.</p>
