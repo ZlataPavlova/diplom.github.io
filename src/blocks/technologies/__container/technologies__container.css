@@ -1,8 +1,0 @@
-.technologies__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    min-width: 120px;
-    min-height: 153px;
-}

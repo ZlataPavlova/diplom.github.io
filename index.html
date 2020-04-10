@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Главная страница сервиса для анализа происходящих в мире событий">
+    <meta name="author" content="Pavlova Zlata">
+    <title>Main</title>
+    <link rel="icon" href='/src/image/главная.svg' type="image/svg">
+    <link rel="stylesheet" href="style.7d129d8f03d3123158b7.css">
+</head>
+
+<body>
+    <div class="page">
+        <header class="page__header header header_white">
+            <h2 class="header__title-white">NewsAnalyzer</h2>
+            <div class="header__link">
+                <a class="header__link_style-white link link_active-white" href="index.html" target="_blank">Главная</a>
+                <a class="header__link_style-white link " href="about.html" target="_blank">О проекте</a>
+            </div>
+        </header>
+        <section class="page__search search">
+
+            <h1 class="search__title">Что в мире творится?</h1>
+            <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+            <div class="search__field">
+                <form name="search__form">
+                    <div class="search__input">
+                        <input type="text" name="title" placeholder="Введите тему новости" class="search__input_text">
+                        <button class="search__button search__text">Искать</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="page__search-result search-result">
+            <!-- блок preloader будет использоваться во время загрузки карточек с сервиса, сейчас он отключен
+            и не отображается,чтобы посмотреть как он выглядет необходимо зайти в класс preloader и снять display:none -->
+            <div class="preloader">
+                <i class="preloader__circle-preloader"></i>
+                <p class="preloader__text">Идет поиск новостей...</p>
+            </div>
+            <!-- блок будет использоваться если при загрузке карточек с сервера будет выдана ошибка 404,чтобы посмотреть как он выглядет необходимо зайти в класс search-result__not-found и снять display:none -->
+            <div class="search-result__not-found">
+                <img class="search-result__not-found__image" src="../images/not-found_v1.svg" alt="Ничего не найдено">
+                <h3 class="search-result__not-found__title">Ничего не найдено</h3>
+                <p class="search-result__not-found__text">К сожалению по вашему запросу ничего не найдено.</p>
+            </div>
+            <!-- контейнер с подгружаемыми карточками в будущем будут загружаться с сервера сейчас отрисованы статично -->
+            <div class="search-result__cards">
+                <div class="search-result__header">
+                    <h3 class="search-result__title">Результаты поиска</h3>
+                    <a class="search-result__link link" href="analytics.html" target="_blank">Посмотреть аналитику &rsaquo;</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_1.png" alt="Национальное достояние – парки">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Национальное достояние – парки </h3>
+                    <p class="card__text">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a class="card__link link" href="https://lenta.ru/" target="_blank">LENTA.RU</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_2.png" alt="Лесные огоньки">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="card__text"> Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                    <a class="card__link link" href="https://meduza.io/" target="_blank">МЕДУЗА</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_3.png" alt="Первозданная тайга">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="card__text"> Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                    <a class="card__link link" href="https://ria.ru/" target="_blank">РИА</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_4.png" alt="Национальное достояние – парки">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
+                    <p class="card__text"> В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+                    <a class="card__link link" href="https://zen.yandex.ru/" target="_blank">ДЗЕН</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_5.png" alt="Лесные огоньки">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
+                    <p class="card__text"> Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного из местных чудес природы.</p>
+                    <a class="card__link link" href="https://www.afisha.ru/" target="_blank">АФИША</a>
+                </div>
+                <div class="card">
+                    <img class="card__image" src="../images/card_6.png" alt="Первозданная тайга">
+                    <p class="card__date">2 августа, 2019</p>
+                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <p class="card__text"> Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
+                    <a class="card__link link" href="https://zona.media/" target="_blank">МЕДИАЗОНА</a>
+                </div>
+
+                <button class="search-result__button search-result__text">Показать еще</button>
+            </div>
+
+        </section>
+        <section class="page__about-author about-author">
+            <img class="about-author__image" src="../images/avatar.jpg" alt="Аватар автора">
+            <div class="about-author__info">
+                <h3 class="about-author__title">Об авторе</h3>
+                <p class="about-author__text"> Это блок с описаением автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владете.
+                    <br> Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+            </div>
+        </section>
+        <section class="page__footer footer">
+            <p class="footer__copyright link colortext">&copy; 2020. Pavlova Zlata</p>
+            <div class="footer__container-link">
+                <a class="footer__link link" href="index.html" target="_blank">Главная</a>
+                <a class="footer__link link" href="about.html" target="_blank">О проекте</a>
+                <a class="footer__link link" href="https://praktikum.yandex.ru" target="_blank">ЯндексПрактикум</a>
+            </div>
+            <div class="footer__container-image">
+                <a class="link" href="https://github.com/ZlataPavlova" target="_blank">
+                <img class="footer__image" src="../images/git.svg" alt="иконка Github">
+            </a>
+                <a class="link" href="https://vk.com/id29548218" target="_blank">
+                <img class="footer__image" src="../images/vk.svg" alt="иконка vk">
+            </a>
+            </div>
+        </section>
+    </div>
+
+
+    <script type="module" src="main.31aa8026d22272c4a9f8.js"></script>
+</body>
+
+</html>
