@@ -7,7 +7,7 @@
     top: 126px;
     border-radius: 50%;
     border: black;
-    background-image: "<%=require('./image/slider-next.png').default%>";
+    background-image: url('/dist/images/slider-next.png');
 }
 
 .swiper-button-next:hover {
