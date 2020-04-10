@@ -11,7 +11,7 @@
     max-width: 1440px;
     height: 536px;
     padding-top: 160px;
-    background-image: url('/src/image/header.png');
+    background-image: url"<%=require('/src/image/header.png').default%>";
     background-repeat: no-repeat;
     background-size: cover;
 }
