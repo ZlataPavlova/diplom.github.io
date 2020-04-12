@@ -12,6 +12,10 @@
     border: none;
 }
 
+.search__input_text:focus {
+    outline: none;
+}
+
 @media screen and (min-width: 320px) and (max-width: 786px) {
     .search__input_text {
         width: 256px;

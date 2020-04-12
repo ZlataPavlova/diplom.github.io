@@ -10,6 +10,11 @@
     background-image: url('../../image/slider-next.png');
 }
 
+.swiper-button-next:focus {
+    border: none;
+    outline: none;
+}
+
 .swiper-button-next:hover {
     transform: scale(0.8);
     box-shadow: 0 0 12px blue;
