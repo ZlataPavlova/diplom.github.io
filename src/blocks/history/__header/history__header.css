@@ -12,13 +12,16 @@
     .history__header {
         margin-top: 32px;
         flex-wrap: wrap;
+        /* margin-bottom: 50px; */
     }
 }
 
 @media screen and (min-width: 537px) and (max-width: 1366px) {
     .history__header {
         margin-left: 40px;
+        margin-right: 40px;
         margin-top: 72px;
         height: 34px;
+        margin-bottom: 50px;
     }
 }

@@ -7,7 +7,18 @@
     }
 }
 
-@media screen and (min-width: 537px) and (max-width: 1024px) {
+@media screen and (min-width: 537px) and (max-width: 667px) {
+    .analytics-diagram__column__image-saturday {
+        position: relative;
+        margin-left: 0px;
+        margin-right: 0px;
+        /* width: 390px; */
+        width: calc(100%-104px);
+        height: 24px;
+    }
+}
+
+@media screen and (min-width: 668px) and (max-width: 1024px) {
     .analytics-diagram__column__image-saturday {
         position: relative;
         margin-left: 0px;

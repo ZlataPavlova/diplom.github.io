@@ -1,5 +1,8 @@
+@import url('./__text/search__button__text.css');
 .search__button {
     position: relative;
+    display: flex;
+    justify-content: center;
     width: 168px;
     height: 64px;
     margin-top: 0px;

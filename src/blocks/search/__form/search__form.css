@@ -1,12 +1,27 @@
 .search__form {
     position: relative;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     min-height: 64px;
+    margin-left: 416px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {
     .search__form {
         flex-wrap: wrap;
+        margin-left: 16px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 823px) {
+    .search__form {
+        margin-left: 104px;
+    }
+}
+
+@media screen and (min-width: 824px) and (max-width: 1024px) {
+    .search__form {
+        margin-left: 250px;
     }
 }

@@ -7,7 +7,6 @@
 .search {
     display: block;
     position: relative;
-    justify-content: flex-start;
     max-width: 1440px;
     height: 536px;
     padding-top: 160px;
@@ -25,6 +24,6 @@
 
 @media screen and (min-width: 537px) and (max-width: 768px) {
     .search {
-        height: 400px
+        min-height: 400px;
     }
 }

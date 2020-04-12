@@ -1,7 +1,7 @@
 .analytics-diagram__axis {
     position: relative;
     margin-top: 16px;
-    margin-left: 208px;
+    margin-left: 104px;
     height: 20px;
 }
 
@@ -16,5 +16,6 @@
         margin-top: 16px;
         margin-left: 0px;
         width: 100%;
+        display: none;
     }
 }

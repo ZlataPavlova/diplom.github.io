@@ -1,0 +1,13 @@
+.search__button__text {
+    position: relative;
+    margin: auto;
+    font-family: roboto-medium, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    color: #FFFFFF;
+}

@@ -15,20 +15,22 @@
     <div class="page">
         <header class="page__header header header_white">
             <h2 class="header__title-white">NewsAnalyzer</h2>
-            <div class="header__link">
-                <a class="header__link_style-white link link_active-white" href="index.html" target="_blank">Главная</a>
-                <a class="header__link_style-white link " href="about.html" target="_blank">О проекте</a>
-            </div>
+
+            <ul class="header__link">
+                <li><a href="index.html" class="header__link_style-white link link_active-white" target="_blank">Главная</a></li>
+                <li><a class="header__link_style-white link " href="about.html" target="_blank">О проекте</a></li>
+            </ul>
+
         </header>
         <section class="page__search search">
 
             <h1 class="search__title">Что в мире творится?</h1>
             <p class="search__text">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
             <div class="search__field">
-                <form name="search__form">
+                <form name="search__form" class="search__form">
                     <div class="search__input">
                         <input type="text" name="title" placeholder="Введите тему новости" class="search__input_text">
-                        <button class="search__button search__text">Искать</button>
+                        <button class="search__button search__button__text">Искать</button>
                     </div>
                 </form>
             </div>
@@ -69,7 +71,7 @@
                 <div class="card">
                     <img class="card__image" src="<%=require('./image/card_3.png').default%>" alt="Первозданная тайга">
                     <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
                     <p class="card__text"> Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                     <a class="card__link link" href="https://ria.ru/" target="_blank">РИА</a>
                 </div>
@@ -90,7 +92,7 @@
                 <div class="card">
                     <img class="card__image" src="<%=require('./image/card_6.png').default%>" alt="Первозданная тайга">
                     <p class="card__date">2 августа, 2019</p>
-                    <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
+                    <h3 class="card__title">Национальное достояние – парки</h3>
                     <p class="card__text"> Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
                     <a class="card__link link" href="https://zona.media/" target="_blank">МЕДИАЗОНА</a>
                 </div>

@@ -17,6 +17,8 @@
 }
 
 .link_active-white {
+    /* 
+    margin-right: 15px; */
     border-bottom: 3px solid #FFFFFF;
     color: #FFFFFF;
 }

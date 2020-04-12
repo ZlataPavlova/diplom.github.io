@@ -1,7 +1,8 @@
 .search__title {
     position: relative;
     max-width: 600px;
-    margin: auto;
+    margin-left: 416px;
+    margin_top: 0px;
     text-align: left;
     font-family: robotoslab-regular, Arial, sans-serif;
     font-style: normal;
@@ -11,11 +12,25 @@
     color: #FFFFFF;
 }
 
-@media screen and (min-width: 320px) and (max-width: 536px) {
+@media screen and (min-width: 320px) and (max-width: 586px) {
     .search__title {
         width: 90%;
-        margin-right: 14px;
+        margin-left: 14px;
         font-size: 36px;
         line-height: 40px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 786px) {
+    .search__title {
+        width: 385px;
+        margin-left: 104px;
+    }
+}
+
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+    .search__title {
+        width: 452px;
+        margin: auto;
     }
 }

@@ -12,10 +12,10 @@
     position: relative;
     max-width: 1440px;
     height: 24px;
-    margin-left: 104px;
-    margin-right: 104px;
+    /* margin-right: 104px; */
     justify-content: baseline;
     align-items: center;
+    border: 1px solid orangered;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {
@@ -30,6 +30,5 @@
     .analytics-diagram__column {
         margin-left: 0px;
         margin-right: 0px;
-        width: 100%;
     }
 }

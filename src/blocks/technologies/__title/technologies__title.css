@@ -21,7 +21,7 @@
     }
 }
 
-@media screen and (min-width: 537px) and (max-width: 768px) {
+@media screen and (min-width: 537px) and (max-width: 812px) {
     .technologies__title {
         margin-left: 40px;
         margin-right: 300px;

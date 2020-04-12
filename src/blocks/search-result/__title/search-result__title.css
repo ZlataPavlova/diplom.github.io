@@ -1,8 +1,9 @@
 .search-result__title {
     position: relative;
-    width: 712px;
+    /* width: 712px; */
     min-height: 46px;
     margin-top: 0px;
+    margin-bottom: 0px;
     font-family: robotoslab-regular, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;

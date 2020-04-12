@@ -13,10 +13,20 @@
     color: #1A1B22;
 }
 
-@media screen and (min-width: 320px) and (max-width: 786px) {
+@media screen and (min-width: 320px) and (max-width: 586px) {
     .card__text {
         margin-left: 16px;
         margin-right: 16px;
+        height: 88px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media screen and (min-width: 587px) and (max-width: 786px) {
+    .card__text {
+        height: 88px;
+        margin-left: 16px;
         overflow: hidden;
         text-overflow: ellipsis;
     }

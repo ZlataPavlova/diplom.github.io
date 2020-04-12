@@ -1,6 +1,5 @@
 .analytics-diagram__vector {
     position: relative;
-    margin-left: 104px;
     margin-top: 92px;
 }
 
@@ -8,6 +7,6 @@
     .analytics-diagram__vector {
         margin-left: 0px;
         width: 288px;
-        margin-top: 70px;
+        margin-top: 65px;
     }
 }

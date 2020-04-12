@@ -2,7 +2,7 @@
 .search__input {
     position: relative;
     display: flex;
-    width: 608px;
+    max-width: 608px;
     height: 64px;
     background: #FFFFFF;
     /* simulator/gray/divider */
@@ -14,6 +14,19 @@
 @media screen and (min-width: 320px) and (max-width: 536px) {
     .search__input {
         flex-wrap: wrap;
-        width: 288px;
+        max-width: 288px;
     }
 }
+
+
+/* @media screen and (min-width: 537px) and (max-width: 786px) {
+    .search__input {
+        margin-left: 104px;
+    }
+}
+
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+    .search__input {
+        margin: auto;
+    }
+} */
