@@ -1,0 +1,37 @@
+.search__text {
+    position: relative;
+    max-width: 545px;
+    height: 48px;
+    margin-left: 416px;
+    margin-top: 32px;
+    font-family: roboto-medium, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .search__text {
+        width: 90%;
+        margin-left: 14px;
+        height: 130px;
+        font-size: 20px;
+        line-height: 26px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 786px) {
+    .search__text {
+        width: 452px;
+        margin-left: 104px;
+    }
+}
+
+@media screen and (min-width: 787px) and (max-width: 1024px) {
+    .search__text {
+        width: 452px;
+        margin: auto;
+    }
+}

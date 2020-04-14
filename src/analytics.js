@@ -1,0 +1,12 @@
+import "./analytics.css";
+// import './image/аналитика.svg';
+// import './image/воскресенье.svg';
+// import './image/вторник.svg';
+// import './image/ось диаграммы.svg';
+// import './image/понедельник.svg';
+// import './image/пятница.svg';
+// import './image/среда.svg';
+// import './image/суббота.svg';
+// import './image/четверг.svg';
+// import './image/Vector.svg';
+// import './image/vk.svg';

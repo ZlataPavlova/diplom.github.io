@@ -1,0 +1,30 @@
+.technologies__title {
+    position: relative;
+    max-width: 344px;
+    min-height: 92px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: roboto-regular, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    /* or 115% */
+    /* main/black */
+    color: #1A1B22;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .technologies__title {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 812px) {
+    .technologies__title {
+        margin-left: 40px;
+        margin-right: 300px;
+        margin-top: 0px;
+    }
+}

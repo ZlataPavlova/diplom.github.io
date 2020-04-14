@@ -1,0 +1,19 @@
+@import url('./__search-result/page__search-result.css');
+@import url('./__search/page__search.css');
+@import url('./__about-author/page__about-author.css');
+@import url('./__footer/page__footer.css');
+@import url('./__project-information/page__project-information.css');
+@import url('./__technologies/page__technologies.css');
+@import url('./__history/page__history.css');
+@import url('./__analytics-information/page__analytics-information.css');
+@import url('./__analytics-diagram/page__analytics-diagram.css');
+@import url('./__header/page__header.css');
+.page {
+    position: relative;
+    display: block;
+    justify-content: center;
+    max-width: 1440px;
+    min-height: 934px;
+    margin: auto;
+    background: #FFFFFF;
+}

@@ -1,0 +1,23 @@
+@import url('./swiper-pagination-bullet.css');
+.swiper-pagination {
+    width: 72px;
+    justify-content: space-between;
+    position: relative;
+    display: flex;
+    margin: auto;
+    margin-top: 48px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .swiper-pagination {
+        margin: auto;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .swiper-pagination {
+        margin: auto;
+        margin-top: 32px;
+    }
+}

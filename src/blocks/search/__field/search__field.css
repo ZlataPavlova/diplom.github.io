@@ -1,0 +1,14 @@
+.search__field {
+    position: relative;
+    display: flex;
+    max-width: 608px;
+    height: 64px;
+    margin-top: 64px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .search__field {
+        width: 288px;
+        flex-wrap: wrap;
+    }
+}

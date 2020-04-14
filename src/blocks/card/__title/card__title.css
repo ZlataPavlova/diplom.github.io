@@ -1,0 +1,22 @@
+.card__title {
+    position: relative;
+    max-width: 352px;
+    /* min-height: 60px; */
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    font-family: robotoslab-regular, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    /* or 115% */
+    /* main/black */
+    color: #1A1B22;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .card__title {
+        width: 90%;
+        margin-left: 16px;
+    }
+}

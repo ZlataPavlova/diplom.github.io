@@ -1,0 +1,8 @@
+.swiper__image {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    left: 24px;
+    top: 62px;
+    border-radius: 1000px;
+}

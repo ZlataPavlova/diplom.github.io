@@ -1,0 +1,23 @@
+@import url('./__link/header__link.css');
+@import url('./__title/header__title-dark.css');
+@import url('./__title/header__title-white.css');
+@import url('./__link/header__link_style-dark.css');
+@import url('./__link/header__link_style-white.css');
+.header {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.header_dark {
+    box-shadow: inset 0px -1px 0px #D1D2D6;
+    z-index: 1;
+}
+
+.header_white {
+    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+    z-index: 1;
+}

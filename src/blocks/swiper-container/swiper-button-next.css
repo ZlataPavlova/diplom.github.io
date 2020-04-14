@@ -1,0 +1,34 @@
+.swiper-button-next {
+    position: absolute;
+    background-size: contain;
+    min-width: 40px;
+    min-height: 40px;
+    right: 24px;
+    top: 126px;
+    border-radius: 50%;
+    border: black;
+    background-image: url('../../image/slider-next.png');
+}
+
+.swiper-button-next:focus {
+    border: none;
+    outline: none;
+}
+
+.swiper-button-next:hover {
+    transform: scale(0.8);
+    box-shadow: 0 0 12px blue;
+    -moz-box-shadow: 0 0 12px blue;
+    -o-box-shadow: 0 0 12px blue;
+    -ms-box-shadow: 0 0 12px blue;
+    -webkit-box-shadow: 0 0 12px blue;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 1s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 786px) {
+    .swiper-button-next {
+        display: none;
+    }
+}

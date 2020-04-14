@@ -1,0 +1,7 @@
+.search-result__not-found__image {
+    width: 96px;
+    height: 96px;
+    position: relative;
+    margin-top: 0px;
+    margin-left: calc(50%-48px);
+}

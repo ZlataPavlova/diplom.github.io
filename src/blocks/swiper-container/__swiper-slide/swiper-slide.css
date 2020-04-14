@@ -1,0 +1,18 @@
+@import url('../__date/swiper__date.css');
+@import url('../__image/swiper__image.css');
+@import url('../__info/swiper__info.css');
+@import url('../__title/swiper__title.css');
+@import url('../__email/swiper__email.css');
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 288px;
+    margin-left: 16px;
+    align-items: baseline;
+    align-self: baseline;
+    background: #FFFFFF;
+    border-radius: 16px;
+}

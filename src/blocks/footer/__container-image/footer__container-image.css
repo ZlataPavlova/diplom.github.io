@@ -1,0 +1,22 @@
+.footer__container-image {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 88px;
+    margin-right: 104px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .footer__container-image {
+        order: 1;
+        margin-right: 0px;
+        margin-top: 0px;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .footer__container-image {
+        margin-right: 40px;
+    }
+}

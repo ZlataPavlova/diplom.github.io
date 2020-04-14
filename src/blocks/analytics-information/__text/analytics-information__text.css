@@ -1,0 +1,19 @@
+.analytics-information__text {
+    position: relative;
+    max-width: 816px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 104px;
+    font-family: roboto-medium, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #1A1B22;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .analytics-information__text {
+        margin-left: 0px;
+    }
+}

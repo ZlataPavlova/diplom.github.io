@@ -1,0 +1,21 @@
+.card__image {
+    position: relative;
+    max-width: 400px;
+    max-height: 272px;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .card__image {
+        /* width: 288px;
+        height: 196px; */
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 537px) and (max-width: 768px) {
+    .card__image {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+}

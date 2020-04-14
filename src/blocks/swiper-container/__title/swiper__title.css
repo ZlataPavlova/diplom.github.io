@@ -1,0 +1,23 @@
+.swiper__title {
+    position: relative;
+    max-height: 30px;
+    margin-left: 104px;
+    margin-right: 24px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-family: robotoslab-regular, Arial, sans-serif;
+    ;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    /* identical to box height, or 115% */
+    /* main/black */
+    color: #1A1B22;
+}
+
+@media screen and (min-width: 320px) and (max-width: 536px) {
+    .swiper__title {
+        font-size: 20px;
+    }
+}

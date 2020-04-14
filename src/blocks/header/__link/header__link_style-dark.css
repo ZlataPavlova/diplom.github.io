@@ -1,0 +1,22 @@
+.header__link_style-dark {
+    position: relative;
+    align-items: flex-start;
+    display: flex;
+    text-align: center;
+    color: #B6BCBF;
+}
+
+.header__link_style-dark:active {
+    border-bottom: 3px solid #000000;
+    color: #000000;
+}
+
+.header__link_style-dark:hover {
+    border-bottom: 3px solid #000000;
+    color: #000000;
+}
+
+.link_active-dark {
+    border-bottom: 3px solid #000000;
+    color: #000000;
+}
