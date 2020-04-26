@@ -1,0 +1,235 @@
+export class Statistics {
+    constructor(title, numberNews, numberTitle,
+            columnValueOne, columnValueTwo, columnValueTree, columnValueFour, columnValueFive, columnValueSix, columnValueSeven,
+            columnDateOne, columnDateTwo, columnDateTree, columnDateFour, columnDateFive, columnDateSix, columnDateSeven,
+            imageOne, imageTwo, imageTree, imageFour, imageFive, imageSix, imageSeven) {
+            this.title = title;
+            this.numberNews = numberNews;
+            this.numberTitle = numberTitle;
+            this.columnValueOne = columnValueOne;
+            this.columnValueTwo = columnValueTwo;
+            this.columnValueTree = columnValueTree;
+            this.columnValueFour = columnValueFour;
+            this.columnValueFive = columnValueFive;
+            this.columnValueSix = columnValueSix;
+            this.columnValueSeven = columnValueSeven;
+            //
+            this.columnDateOne = columnDateOne;
+            this.columnDateTwo = columnDateTwo;
+            this.columnDateTree = columnDateTree;
+            this.columnDateFour = columnDateFour;
+            this.columnDateFive = columnDateFive;
+            this.columnDateSix = columnDateSix;
+            this.columnDateSeven = columnDateSeven;
+            //
+            this.imageOne = imageOne;
+            this.imageTwo = imageTwo;
+            this.imageTree = imageTree;
+            this.imageFour = imageFour;
+            this.imageFive = imageFive;
+            this.imageSix = imageSix;
+            this.imageSeven = imageSeven;
+        }
+        //метод выводит запрос пользователя из поисковый строки на страницу аналитики
+    showTitle() {
+            let input = localStorage.getItem(1); //получаем из локального хранилища нашу строку
+            let resultinput = JSON.parse(input);
+            this.title.textContent = `Вы спросили: "${resultinput}"`;
+
+        }
+        //считаем  количество упоминаний ключевого слова в заголовках
+    inputInTitle() {
+            let input = localStorage.getItem(1).slice(1, -1); //берем из локального хранилища наше ключевое слово
+            let local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
+            let resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
+            let arr = resultlocalStorage.articles
+
+            let a = [];
+            //собираем массив из заголовков
+            arr.forEach((item) => a.push(item.title))
+
+            for (let i = 0; i < a.length; i++) {
+                let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+                let titileNumber = a.toString().match(regex).length;
+
+                this.showTitileNumber(titileNumber);
+            }
+            this.showNewsNumber(arr);
+            //отправляем массив с карточками в метод который выводит кол-во новостей
+        }
+        //метод, который отображает кол-во ключевых слов в заголовках
+    showTitileNumber(titileNumber) {
+
+            this.numberTitle.textContent = `Упоминаний в заголовках:` + `${titileNumber}`;
+        }
+        //метод, который отображает кол-во новостей
+    showNewsNumber(arr) {
+            this.numberNews.textContent = `Новостей за неделю: "${arr.length}"`;
+            this.sortDate(arr)
+        }
+        //соритруем карточки с новостями по дням недели от текущей и на 7 дней назад
+    sortDate(arr) {
+        this.arr = arr;
+        //создадим массив с датами. С текущей даты на неделю назад
+        let week = []
+
+        for (let i = 0; i < 7; i++) {
+            let date = new Date();
+            let from = date.setDate(date.getDate() - i);
+            console.log(from)
+            week.push(date.toISOString().slice(0, -14));
+
+            this.checkArr(week);
+            this.sortWeek(week);
+        }
+
+    }
+    checkArr(week) {
+
+        let input = localStorage.getItem(1).slice(1, -1); //получаем из локального хранилища нашу строку
+        this.week = week;
+
+
+        let local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
+        let resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
+        let arr = resultlocalStorage.articles;
+        //массивы для заполнения карточками с новостями за одну дату
+        let newsDayOne = [];
+        let newsDayTwo = [];
+        let newsDayThree = [];
+        let newsDayFour = [];
+        let newsDayFive = [];
+        let newsDaySix = [];
+        let newsDaySeven = [];
+
+        //кол-во ключевых слов в заголовках и статьях за первый день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[0]) { newsDayOne.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDayOne.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDayOne
+
+            if (newsDayOne.length == 0 || newsDayOne.toString().match(regex) == null) {
+                numberNewsDayOne = 0
+            } else { numberNewsDayOne = newsDayOne.toString().match(regex).length; }
+            this.imageOne.style.width = numberNewsDayOne * 10 + "px"; //строим столбец диаграммы
+            this.columnValueOne.textContent = numberNewsDayOne; //выводим кол-во ключевого слова за день
+
+        }
+
+        //кол-во ключевых слов в заголовках и статьях за второй день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[1]) { newsDayTwo.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDayTwo.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDayTwo
+
+            if (newsDayTwo.length == 0 || newsDayTwo.toString().match(regex) == null) {
+                numberNewsDayTwo = 0
+            } else { numberNewsDayTwo = newsDayTwo.toString().match(regex).length; }
+            this.imageTwo.style.width = numberNewsDayTwo * 10 + "px"; //строим столбец диаграммы
+            this.columnValueTwo.textContent = numberNewsDayTwo; //выводим кол-во ключевого слова за день
+
+        }
+        //кол-во ключевых слов в заголовках и статьях за третий день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[2]) { newsDayThree.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDayThree.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDayThree
+
+            if (newsDayThree.length == 0 || newsDayThree.toString().match(regex) == null) {
+                numberNewsDayThree = 0
+            } else { numberNewsDayThree = newsDayThree.toString().match(regex).length; }
+            this.imageTree.style.width = numberNewsDayThree * 10 + "px"; //строим столбец диаграммы
+            this.columnValueTree.textContent = numberNewsDayThree; //выводим кол-во ключевого слова за день
+
+        }
+        //кол-во ключевых слов в заголовках и статьях за четвертый день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[3]) { newsDayFour.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDayFour.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDayFour
+
+            if (newsDayFour.length == 0 || newsDayFour.toString().match(regex) == null) {
+                numberNewsDayFour = 0
+            } else { numberNewsDayFour = newsDayFour.toString().match(regex).length; }
+            this.imageFour.style.width = numberNewsDayFour * 10 + "px"; //строим столбец диаграммы
+            this.columnValueFour.textContent = numberNewsDayFour; //выводим кол-во ключевого слова за день
+
+        }
+        //кол-во ключевых слов в заголовках и статьях за пятый день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[4]) { newsDayFive.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDayFive.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDayFive
+
+            if (newsDayFive.length == 0 || newsDayFive.toString().match(regex) == null) {
+                numberNewsDayFive = 0
+            } else { numberNewsDayFive = newsDayFive.toString().match(regex).length; }
+            this.imageFive.style.width = numberNewsDayFive * 10 + "px"; //строим столбец диаграммы
+            this.columnValueFive.textContent = numberNewsDayFive; //выводим кол-во ключевого слова за день
+
+        }
+        //кол-во ключевых слов в заголовках и статьях за шестой день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[5]) { newsDaySix.push(item.title, item.description) } })
+
+        for (let i = 0; i <= newsDaySix.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDaySix
+
+            if (newsDaySix.length == 0 || newsDaySix.toString().match(regex) == null) {
+                numberNewsDaySix = 0
+            } else { numberNewsDaySix = newsDaySix.toString().match(regex).length; }
+            this.imageSix.style.width = numberNewsDaySix * 10 + "px"; //строим столбец диаграммы
+            this.columnValueSix.textContent = numberNewsDaySix; //выводим кол-во ключевого слова за день
+
+        }
+        //кол-во ключевых слов в заголовках и статьях за седьмой день из массива с датами
+        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[6]) { newsDaySeven.push(item.title, item.description) } })
+            //console.log(newsDaySeven)
+        for (let i = 0; i <= newsDaySeven.length; i++) {
+            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            let numberNewsDaySeven
+
+            if (newsDaySeven.length == 0 || newsDaySeven.toString().match(regex) == null) {
+                numberNewsDaySeven = 0
+            } else { numberNewsDaySeven = newsDaySeven.toString().match(regex).length; }
+            this.imageSeven.style.width = numberNewsDaySeven * 10 + "px"; //строим столбец диаграммы
+            this.columnValueSeven.textContent = numberNewsDaySeven; //выводим кол-во ключевого слова за день
+
+        }
+    }
+    sortWeek(week) {
+        this.week = week;
+
+
+        let newWeek = week.map((item) => {
+            let date = new Date(item)
+            let nameDays = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
+
+            let days = date.getDate();
+            let name = nameDays[date.getDay()];
+            let dates = days + ',' + name
+            return dates
+        })
+
+        this.showWeek(newWeek);
+    }
+
+
+    showWeek(newWeek) {
+        this.columnDateOne.textContent = newWeek[0];
+        this.columnDateTwo.textContent = newWeek[1];
+        this.columnDateTree.textContent = newWeek[2];
+        this.columnDateFour.textContent = newWeek[3];
+        this.columnDateFive.textContent = newWeek[4];
+        this.columnDateSix.textContent = newWeek[5];
+        this.columnDateSeven.textContent = newWeek[6];
+
+    }
+
+
+}

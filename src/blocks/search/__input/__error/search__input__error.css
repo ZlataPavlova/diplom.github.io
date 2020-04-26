@@ -1,0 +1,15 @@
+.search__input__error {
+    position: absolute;
+    left: 25px;
+    top: 65px;
+    font-family: robotoslab-regular, Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: red;
+}
+
+.input_error {
+    border: 2px solid red;
+}

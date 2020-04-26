@@ -1,4 +1,5 @@
 @import url('./search__input_text.css');
+@import url('./__error/search__input__error.css');
 .search__input {
     position: relative;
     display: flex;

@@ -1,7 +1,7 @@
 .card__link {
-    position: relative;
-    margin-left: 24px;
-    margin-bottom: 24px;
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
     font-family: robotoslab-regular, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;

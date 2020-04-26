@@ -1,11 +1,18 @@
 .search-result__button {
     position: relative;
+    display: block;
+    margin: 0 auto;
     width: 288px;
     height: 64px;
-    margin-top: 64px;
+    margin: auto;
+    /* margin-top: 64px; */
     background: #FFFFFF;
     border-radius: 80px;
     border: #FFFFFF;
+}
+
+.search-result__button:focus {
+    outline: none;
 }
 
 .search-result__button:hover {

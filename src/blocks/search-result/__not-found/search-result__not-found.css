@@ -5,6 +5,8 @@
     position: relative;
     display: block;
     margin: auto;
+    margin-top: 80px;
+    margin-bottom: 80px;
     height: 214px;
     display: none;
 }
