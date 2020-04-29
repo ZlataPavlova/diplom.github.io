@@ -1,26 +1,29 @@
 import { index } from '../../index';
+import { NewsApi } from '../modules/NewsApi';
+import { NewCardList } from './NewsCardList';
+
+
+
 export class NewsCard {
 
-    constructor(title, urlToImage, publishedAt, description, url, container, formatDate) {
+    constructor(title, urlToImage, publishedAt, description, url, container) {
             this.title = title;
             this.urlToImage = urlToImage;
             this.publishedAt = publishedAt;
             this.description = description;
             this.url = url;
             this.container = container;
-            this.formatDate = formatDate;
-
 
         }
         //метод с шаблоном карточки для html
     create(title, urlToImage, description, url, name, publishedAt) {
         //переводим дату в нужный формат (в дальнейшем этот функционал будет в отдельном классе :))
-        let date = new Date(publishedAt)
+        const date = new Date(publishedAt)
         const mounths = ['января', 'февраля', ' марта', 'апреля', 'мая', 'июня', ' июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
-        let days = date.getDate();
-        let month = mounths[date.getMonth()];
-        let years = date.getFullYear();
-        let dates = days + month + ',' + ' ' + years
+        const days = date.getDate();
+        const month = mounths[date.getMonth()];
+        const years = date.getFullYear();
+        const dates = days + month + ',' + ' ' + years
             //создаем разметку для карточек
         const card = document.createElement('div');
         const cardImage = document.createElement('img');

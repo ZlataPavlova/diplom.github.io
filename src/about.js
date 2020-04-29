@@ -26,7 +26,10 @@ const apiGit = new GithubApi({
 const commitCard = new CommitCard();
 const commitCardList = new CommitCardList(commitCard, containerCommit, apiGit);
 apiGit.getCommits().then((res) => {
-    console.log(res);
-    //console.log(res.status);
-    commitCardList.render(containerCommit, res)
-})
+        console.log(res);
+        //console.log(res.status);
+        commitCardList.render(containerCommit, res)
+    })
+    .catch((err) => {
+        alert(err);
+    });

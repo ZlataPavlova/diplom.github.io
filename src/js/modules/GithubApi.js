@@ -10,13 +10,13 @@ export class GithubApi {
                 // }
             })
             .then((res) => {
-                if (res.ok) return res.json();
-                return res.status;
+                if (res.ok) {
+                    console.log(res.status)
+                    return res.json();
+                }
+                console.log(res.status)
+                return Promise.reject(`Что-то пошло не так: ${res.status}`);
             })
-
-        .catch((err) => {
-            console.log(err);
-        });
 
     }
 }

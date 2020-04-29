@@ -8,12 +8,12 @@ export class CommitCard {
         }
         //метод с шаблоном комментария для html
     create(name, email, date, message, avatar_url) {
-        let dates = new Date(date)
+        const dates = new Date(date)
         const mounths = ['января', 'февраля', ' марта', 'апреля', 'мая', 'июня', ' июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря']
-        let days = dates.getDate();
-        let month = mounths[dates.getMonth()];
-        let years = dates.getFullYear();
-        let number = days + month + ',' + ' ' + years
+        const days = dates.getDate();
+        const month = mounths[dates.getMonth()];
+        const years = dates.getFullYear();
+        const number = days + month + ',' + ' ' + years
 
         console.log(name);
         console.log(email);

@@ -32,81 +32,76 @@ export class Statistics {
         }
         //метод выводит запрос пользователя из поисковый строки на страницу аналитики
     showTitle() {
-            let input = localStorage.getItem(1); //получаем из локального хранилища нашу строку
-            let resultinput = JSON.parse(input);
+            const input = localStorage.getItem(1); //получаем из локального хранилища нашу строку
+            const resultinput = JSON.parse(input);
             this.title.textContent = `Вы спросили: "${resultinput}"`;
 
         }
         //считаем  количество упоминаний ключевого слова в заголовках
     inputInTitle() {
-            let input = localStorage.getItem(1).slice(1, -1); //берем из локального хранилища наше ключевое слово
-            let local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
-            let resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
-            let arr = resultlocalStorage.articles
+            const input = localStorage.getItem(1).slice(1, -1); //берем из локального хранилища наше ключевое слово
+            const local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
+            const resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
+            const arrNews = resultlocalStorage.articles
 
-            let a = [];
+            const arrTitles = [];
             //собираем массив из заголовков
-            arr.forEach((item) => a.push(item.title))
+            arrNews.forEach((item) => arrTitles.push(item.title))
 
-            for (let i = 0; i < a.length; i++) {
+            for (let i = 0; i < arrTitles.length; i++) {
                 let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
-                let titileNumber = a.toString().match(regex).length;
+                let titileNumber = arrTitles.toString().match(regex).length;
 
-                this.showTitileNumber(titileNumber);
+                this._showTitileNumber(titileNumber);
             }
-            this.showNewsNumber(arr);
+            this._showNewsNumber(arrNews);
             //отправляем массив с карточками в метод который выводит кол-во новостей
         }
         //метод, который отображает кол-во ключевых слов в заголовках
-    showTitileNumber(titileNumber) {
+    _showTitileNumber(titileNumber) {
 
             this.numberTitle.textContent = `Упоминаний в заголовках:` + `${titileNumber}`;
         }
         //метод, который отображает кол-во новостей
-    showNewsNumber(arr) {
-            this.numberNews.textContent = `Новостей за неделю: "${arr.length}"`;
-            this.sortDate(arr)
+    _showNewsNumber(arrNews) {
+            this.numberNews.textContent = `Новостей за неделю: "${arrNews.length}"`;
+            this._sortDate(arrNews)
         }
         //соритруем карточки с новостями по дням недели от текущей и на 7 дней назад
-    sortDate(arr) {
-        this.arr = arr;
+    _sortDate(arrNews) {
+        this.arrNews = arrNews;
         //создадим массив с датами. С текущей даты на неделю назад
-        let week = []
-
+        const weeks = [];
         for (let i = 0; i < 7; i++) {
-            let date = new Date();
-            let from = date.setDate(date.getDate() - i);
+            const date = new Date();
+            const from = date.setDate(date.getDate() - i);
             console.log(from)
-            week.push(date.toISOString().slice(0, -14));
-
-            this.checkArr(week);
-            this.sortWeek(week);
+            weeks.push(date.toISOString().slice(0, -14));
+            this._checkArr(weeks);
+            this._sortWeek(weeks);
         }
 
     }
-    checkArr(week) {
-
-        let input = localStorage.getItem(1).slice(1, -1); //получаем из локального хранилища нашу строку
-        this.week = week;
-
-
-        let local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
-        let resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
-        let arr = resultlocalStorage.articles;
+    _checkArr(weeks) {
+        const input = localStorage.getItem(1).slice(1, -1); //получаем из локального хранилища нашу строку
+        this.weeks = weeks;
+        const local = localStorage.getItem(0); //возвращаем из лок.хранлища наши карточки с новостями
+        const resultlocalStorage = JSON.parse(local); // парсим обратно в объект карточки с новостями
+        const arrNews = resultlocalStorage.articles;
         //массивы для заполнения карточками с новостями за одну дату
-        let newsDayOne = [];
-        let newsDayTwo = [];
-        let newsDayThree = [];
-        let newsDayFour = [];
-        let newsDayFive = [];
-        let newsDaySix = [];
-        let newsDaySeven = [];
+        const newsDayOne = [];
+        const newsDayTwo = [];
+        const newsDayThree = [];
+        const newsDayFour = [];
+        const newsDayFive = [];
+        const newsDaySix = [];
+        const newsDaySeven = [];
 
         //кол-во ключевых слов в заголовках и статьях за первый день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[0]) { newsDayOne.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[0]) { newsDayOne.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDayOne.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDayOne
 
             if (newsDayOne.length == 0 || newsDayOne.toString().match(regex) == null) {
@@ -118,10 +113,10 @@ export class Statistics {
         }
 
         //кол-во ключевых слов в заголовках и статьях за второй день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[1]) { newsDayTwo.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[1]) { newsDayTwo.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDayTwo.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDayTwo
 
             if (newsDayTwo.length == 0 || newsDayTwo.toString().match(regex) == null) {
@@ -132,10 +127,10 @@ export class Statistics {
 
         }
         //кол-во ключевых слов в заголовках и статьях за третий день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[2]) { newsDayThree.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[2]) { newsDayThree.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDayThree.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDayThree
 
             if (newsDayThree.length == 0 || newsDayThree.toString().match(regex) == null) {
@@ -146,10 +141,10 @@ export class Statistics {
 
         }
         //кол-во ключевых слов в заголовках и статьях за четвертый день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[3]) { newsDayFour.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[3]) { newsDayFour.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDayFour.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDayFour
 
             if (newsDayFour.length == 0 || newsDayFour.toString().match(regex) == null) {
@@ -160,10 +155,10 @@ export class Statistics {
 
         }
         //кол-во ключевых слов в заголовках и статьях за пятый день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[4]) { newsDayFive.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[4]) { newsDayFive.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDayFive.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDayFive
 
             if (newsDayFive.length == 0 || newsDayFive.toString().match(regex) == null) {
@@ -174,10 +169,10 @@ export class Statistics {
 
         }
         //кол-во ключевых слов в заголовках и статьях за шестой день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[5]) { newsDaySix.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[5]) { newsDaySix.push(item.title, item.description) } })
 
         for (let i = 0; i <= newsDaySix.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDaySix
 
             if (newsDaySix.length == 0 || newsDaySix.toString().match(regex) == null) {
@@ -188,10 +183,10 @@ export class Statistics {
 
         }
         //кол-во ключевых слов в заголовках и статьях за седьмой день из массива с датами
-        arr.forEach((item) => { if (item.publishedAt.slice(0, -10) == week[6]) { newsDaySeven.push(item.title, item.description) } })
+        arrNews.forEach((item) => { if (item.publishedAt.slice(0, -10) == weeks[6]) { newsDaySeven.push(item.title, item.description) } })
             //console.log(newsDaySeven)
         for (let i = 0; i <= newsDaySeven.length; i++) {
-            let regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
+            const regex = new RegExp(input, 'gi'); //задаем регулярное выражение для поиска ключевого слова в массиве заголовов
             let numberNewsDaySeven
 
             if (newsDaySeven.length == 0 || newsDaySeven.toString().match(regex) == null) {
@@ -202,25 +197,25 @@ export class Statistics {
 
         }
     }
-    sortWeek(week) {
-        this.week = week;
+    _sortWeek(weeks) {
+        this.weeks = weeks;
 
 
-        let newWeek = week.map((item) => {
-            let date = new Date(item)
-            let nameDays = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
+        const newWeek = weeks.map((item) => {
+            const date = new Date(item)
+            const nameDays = ['вс', 'пн', 'вт', 'ср', 'чт', 'пт', 'сб']
 
-            let days = date.getDate();
-            let name = nameDays[date.getDay()];
-            let dates = days + ',' + name
+            const days = date.getDate();
+            const name = nameDays[date.getDay()];
+            const dates = days + ',' + name
             return dates
         })
 
-        this.showWeek(newWeek);
+        this._showWeek(newWeek);
     }
 
 
-    showWeek(newWeek) {
+    _showWeek(newWeek) {
         this.columnDateOne.textContent = newWeek[0];
         this.columnDateTwo.textContent = newWeek[1];
         this.columnDateTree.textContent = newWeek[2];

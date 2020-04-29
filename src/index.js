@@ -11,13 +11,16 @@ import { NewsCard } from './js/components/NewsCard';
 
 
 
-//валидация поиска и все что с этим связано
+
 const form = document.querySelector('.search__form');
 const input = document.querySelector('.search__input_text');
 const inputError = document.querySelector('.search__input__error');
 const inputButton = document.querySelector('.search__button');
 const moreButton = document.querySelector('.search-result__button');
 const container = document.querySelector('.search-result__container'); // место куда записывать карточки
+const notFound = document.querySelector('.search-result__not-found');
+const resultCards = document.querySelector('.search-result__cards');
+const preloader = document.querySelector('.preloader');
 const cards = [];
 const words = {
     ru: {
@@ -25,11 +28,28 @@ const words = {
     }
 };
 
-const card = new NewsCard();
 
-//formatDate.checkDate('publishedAt');
-let d;
-const apiNews = new NewsApi(form, {
+//функция находящая дату за 7 дней до сегодняшнего дня и приводящая ее в нужный формат для запроса
+function creatDateFrom() {
+    let date = new Date();
+    let fromDate = (date.getDate() - 7);
+    console.log(fromDate)
+    if (fromDate < 10) from = "0" + fromDate;
+    let fromMonth = date.getMonth() + 1;
+    if (fromMonth < 10) fromMonth = "0" + fromMonth;
+    return date.getFullYear() + '-' + fromMonth + '-' + fromDate;
+}
+//функция находящая текущую дату я и приводящая ее в нужный формат для запроса
+function creatDateTo() {
+    let date = new Date();
+    let fromDate = date.getDate();
+    console.log(fromDate)
+    if (fromDate < 10) from = "0" + fromDate;
+    let fromMonth = date.getMonth() + 1;
+    if (fromMonth < 10) fromMonth = "0" + fromMonth;
+    return date.getFullYear() + '-' + fromMonth + '-' + fromDate;
+}
+const apiNews = new NewsApi(input, {
     baseUrl: 'https://newsapi.org/v2/everything',
     headers: {
         // authorization: '8cba67af78e94fcd8701bf17106dda68',
@@ -40,13 +60,16 @@ const apiNews = new NewsApi(form, {
     // q: searchInput.search(),
     apiKey: '8cba67af78e94fcd8701bf17106dda68 ',
     pageSize: '100',
-    from: (new Date().getFullYear()) + '-' + '0' + (new Date().getMonth() + 1) + '-' + (new Date().getDate() - 7),
-    to: new Date()
+    from: creatDateFrom(),
+    to: creatDateTo(),
 });
 
-const newCardList = new NewsCardList(card, container, form);
+const card = new NewsCard();
+const newCardList = new NewsCardList(card, container, moreButton);
+const searchInput = new SearchInput(input, inputError, words, inputButton, form, apiNews, newCardList, container, moreButton,
+    notFound, resultCards, preloader);
+searchInput.searchInLocalStorage()
 
-const searchInput = new SearchInput(input, inputError, words, inputButton, form, apiNews, newCardList, container, moreButton);
 // newCardList.reset();
 // apiNews.getNews().then((result) => {
 //     console.log(result);
