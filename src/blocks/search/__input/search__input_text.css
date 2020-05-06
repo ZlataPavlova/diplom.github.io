@@ -14,6 +14,7 @@
 
 .search__input_text:focus {
     outline: none;
+    background-color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 786px) {

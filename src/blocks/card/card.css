@@ -8,11 +8,12 @@
     flex-direction: column;
     position: relative;
     max-width: 400px;
-    max-height: 576px;
+    height: 576px;
     margin-top: 0px;
     align-items: baseline;
     background-color: #FFFFFF;
     border-radius: 16px;
+    margin-top: 32px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

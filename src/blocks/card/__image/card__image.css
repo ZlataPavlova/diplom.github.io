@@ -1,8 +1,10 @@
 .card__image {
     position: relative;
-    max-width: 400px;
-    max-height: 272px;
+    display: flex;
+    width: 400px;
+    height: 272px;
     border-radius: 20px;
+    object-fit: fill;
 }
 
 @media screen and (min-width: 320px) and (max-width: 536px) {

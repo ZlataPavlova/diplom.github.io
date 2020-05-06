@@ -2,6 +2,10 @@
     position: relative;
     max-width: 352px;
     /* min-height: 60px; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
     margin: auto;
     margin-top: 12px;
     margin-bottom: 0px;
