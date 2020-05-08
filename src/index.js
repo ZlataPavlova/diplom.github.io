@@ -27,28 +27,29 @@ const words = {
         NoWord: 'Нужно ввести ключевое слово',
     }
 };
+//функция находящая текущую дату я и приводящая ее в нужный формат для запроса
+function creatDateTo() {
+    let date = new Date();
+    let fromDate = date.getDate();
 
+    if (fromDate < 10) fromDate = '0' + fromDate;
+    let fromMonth = date.getMonth() + 1;
+    if (fromMonth < 10) fromMonth = '0' + fromMonth;
+    console.log(date.getFullYear() + '-' + fromMonth + '-' + fromDate)
+    return date.getFullYear() + '-' + fromMonth + '-' + fromDate;
+}
 
 //функция находящая дату за 7 дней до сегодняшнего дня и приводящая ее в нужный формат для запроса
 function creatDateFrom() {
     let date = new Date();
     let fromDate = (date.getDate() - 7);
-    console.log(fromDate)
-    if (fromDate < 10) from = "0" + fromDate;
+
+    if (fromDate < 10) fromDate = '0' + fromDate;
     let fromMonth = date.getMonth() + 1;
-    if (fromMonth < 10) fromMonth = "0" + fromMonth;
+    if (fromMonth < 10) fromMonth = '0' + fromMonth;
     return date.getFullYear() + '-' + fromMonth + '-' + fromDate;
 }
-//функция находящая текущую дату я и приводящая ее в нужный формат для запроса
-function creatDateTo() {
-    let date = new Date();
-    let fromDate = date.getDate();
-    console.log(fromDate)
-    if (fromDate < 10) from = "0" + fromDate;
-    let fromMonth = date.getMonth() + 1;
-    if (fromMonth < 10) fromMonth = "0" + fromMonth;
-    return date.getFullYear() + '-' + fromMonth + '-' + fromDate;
-}
+
 const apiNews = new NewsApi(input, {
     baseUrl: 'https://newsapi.org/v2/everything',
     headers: {

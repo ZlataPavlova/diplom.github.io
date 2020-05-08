@@ -10,9 +10,16 @@
     flex-wrap: wrap;
     width: 400px;
     height: 288px;
+    margin-top: 10px;
     margin-left: 16px;
     align-items: baseline;
     align-self: baseline;
     background: #FFFFFF;
     border-radius: 16px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.swiper-slide:hover {
+    transform: translate(0, -10px);
+    transition-duration: 0.3s;
 }

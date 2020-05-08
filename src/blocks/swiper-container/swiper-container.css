@@ -17,7 +17,7 @@
     display: flex;
     ;
     width: 1440px;
-    height: 280px;
+    min-height: 280px;
     margin-top: 0px;
     background: #F5F6F7;
 }
