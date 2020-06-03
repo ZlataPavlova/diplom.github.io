@@ -10,6 +10,7 @@
     line-height: 22px;
     color: #1A1B22;
     border: none;
+    outline: none;
 }
 
 .search__input_text:focus {

@@ -51,7 +51,7 @@ function creatDateFrom() {
 }
 
 const apiNews = new NewsApi(input, {
-    baseUrl: 'https://newsapi.org/v2/everything',
+    baseUrl: 'https://praktikum.tk/news/v2/everything',
     headers: {
         // authorization: '8cba67af78e94fcd8701bf17106dda68',
         'Content-Type': 'application/json',
